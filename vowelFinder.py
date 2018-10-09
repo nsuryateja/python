@@ -1,4 +1,4 @@
-string = 'the fragrance of flowers spreads only in the direction of the wind aeiu'
+string = 'the fragrance of flowers spreads only in the direction of the wind'
 lis = string.split()
 print(lis)
 vowel = 0
