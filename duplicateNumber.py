@@ -1,25 +1,25 @@
 import time
-print('input length of the array')
+print('Please input length of the array')
 lenArray = int(input())
 listy = []
 # This loop makes the list of ascending numbers starting from 1: range of each number being 1 to n-1...last two numbers are equal
 for i in range(1,lenArray):
     listy.append(i)
 listy.append(i)
-#algo1
+#algo1 : compare each element with elements to the right
 def returnDuplicate(lis):
     for x in range(len(lis)-1):
         for j in range(x+1,len(lis)):
             if lis[x]==lis[j]:
                 return lis[x]
-#algo2
+#algo2 : sorts the list and compares each element with its adjacent element
 def returnDuplicate2(lis):
     lis.sort()
     for x in range(1,len(lis)):
         if lis[x]==lis[x-1]:
             return lis[x]
 new_list = []
-#algo3
+#algo3 : creates a new list and searches for the element presence in the new list...adds if not present else returns the duplicate
 def returnDuplicate3(lis):
     for x in lis:
         if x not in new_list:
