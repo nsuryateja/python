@@ -2,7 +2,7 @@ import time
 print('input length of the array')
 lenArray = int(input())
 listy = []
-# This loop makes the list of ascending numbers satrting from 1: range of each number being 1 to n-1...last two numbers are equal
+# This loop makes the list of ascending numbers starting from 1: range of each number being 1 to n-1...last two numbers are equal
 for i in range(1,lenArray):
     listy.append(i)
 listy.append(i)
