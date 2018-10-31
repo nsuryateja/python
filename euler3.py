@@ -1,3 +1,4 @@
+#Only For Smaller Numbers
 listOfFactors = []
 def findFactors(num):
         for factor in range(2,num):
