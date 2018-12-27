@@ -1,0 +1,8 @@
+def isWhiteLine(string):
+        return string.isspace()
+#name = open(argv[1],r)
+#contents = name.read()
+contents = 'What you get from the input() function is a string. What can you do with it?'
+for i in contents:
+        if not isWhiteLine(i):
+                print(i,end= '')
