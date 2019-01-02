@@ -1,0 +1,6 @@
+print('Hi there!!Please enter your name')
+userName=input()
+print(f'hi {userName} please enter your age')
+print('hi {} please enter your age'.format(userName))
+userAge=int(input())
+print('you will be ' + str(userAge + 1)+ ' in a year')
