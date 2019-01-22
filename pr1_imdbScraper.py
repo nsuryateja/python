@@ -21,7 +21,8 @@ movie = []
 for i in range(len(movies)):
     if not i%2==0:
         movie.append(movies[i].strip())
-# To print in "250 Nannaku Prematho 7.2 2012" format
+# To print in "250 Nannaku Prematho 7.2 2012" format(commented print statement)
+# To create a dictionary 
 imdbDict = {}
 for x,y in enumerate(movie):
     #print(str(x+1) + ' ' + y + ' ' + str(ratings[x-1]) +  ' ' + str(years[x-1]))
