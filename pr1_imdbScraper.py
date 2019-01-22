@@ -1,4 +1,4 @@
-#This following code scrapes the IMDB website for top 250 indian movies and dictionary of movie name,rating and year of release
+#This following code scrapes the IMDB website for top 250 indian movies and creates a dictionary of movie name,rating and its year of release
 from bs4 import BeautifulSoup
 import requests
 source = requests.get("https://www.imdb.com/india/top-rated-indian-movies/?sort=rk,asc&mode=simple&page=1").text
