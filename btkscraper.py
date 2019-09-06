@@ -18,33 +18,50 @@ def printPara(list1,list2):
     for x,y in zip(list1,list2):
         print(x)
         print(y)
+
+crics = ("Virat_Kohli","Steve_Smith","Sachin_Tendulkar","Kane_Williamson","Joe_Root","Ab_Devilliers","Babar_Azam")
+polis = ("Morarji_Desai","Rajiv_Gandhi","Narendra_Modi","Manmohan_Singh","Atal_Vajpayee")
+
+def paraString(Items):
+    """
+    Takes in tuple of items and gives a string of paragraphs
+    
+    """
+    
+    string = ""
+    for item in Items:
+        string = parser("https://en.wikipedia.org/wiki/" + item) + string
+    string = "\n".join(string)
+    return string
+    
+cricket = paraString(crics)
+pm = paraString(polis)
+
+def writeTo(content,filename):
+    
+    """
+    Takes in content of string, writes to a file
+    """
+    
+    with open(filename,"w") as f:
+        f.write(content)
         
-virat = parser("https://en.wikipedia.org/wiki/Virat_Kohli")
-smith = parser("https://en.wikipedia.org/wiki/Steve_Smith")
-sachi = parser("https://en.wikipedia.org/wiki/Sachin_Tendulkar")
-willi = parser("https://en.wikipedia.org/wiki/Kane_Williamson")
-root  = parser("https://en.wikipedia.org/wiki/Joe_Root")
-abd   = parser("https://en.wikipedia.org/wiki/Ab_Devilliers")
-azam  = parser("https://en.wikipedia.org/wiki/Babar_Azam")
+writeTo(cricket,"cricket.txt")
+writeTo(pm,"pm.txt")
 
-cricket = virat+smith+sachi+willi+root+abd+azam
+def printAlt(f1,f2):
+    """
+    Takes two files and prints them in akterante paragraph manner
+    """
+    
+    with open(f1,"r") as file1, open(f2,"r") as file2:
+        for p1,p2 in zip(file1.readlines(),file2.readlines()):
+            print("-----first-------")
+            print(p1)
+            print("-----second------")
+            print(p2)
+            
+printAlt("cricket.txt","pm.txt")
 
-cricket = "\n".join(cricket)
-f = open('cricket.txt','w',encoding='UTF-8')
-f.write(cricket)
+    
 
-desa  = parser("https://en.wikipedia.org/wiki/Morarji_Desai")
-rajiv = parser("https://en.wikipedia.org/wiki/Rajiv_Gandhi")
-modi  = parser("https://en.wikipedia.org/wiki/Narendra_Modi")
-mohan = parser("https://en.wikipedia.org/wiki/Manmohan_Singh")
-atal  = parser("https://en.wikipedia.org/wiki/Atal_Vajpayee")
-
-pm = desa+rajiv+modi+mohan+atal
-
-pm = "\n".join(pm)
-p = open('pm.txt','r+',encoding='UTF-8')
-p.write(pm)
-
-
-#Printing paragraphs??
-printPara(?)
