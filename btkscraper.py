@@ -28,7 +28,7 @@ def paraString(Items):
     
     """
     
-    string = ""
+    string = []
     for item in Items:
         string = parser("https://en.wikipedia.org/wiki/" + item) + string
     string = "\n".join(string)
