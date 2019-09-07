@@ -49,19 +49,20 @@ def writeTo(content,filename):
 writeTo(cricket,"cricket.txt")
 writeTo(pm,"pm.txt")
 
-def printAlt(f1,f2):
+def printAlt(f1,f2,cf):
     """
-    Takes two files and prints them in akterante paragraph manner
+    Takes two files, creates a composite file, returns it
     """
-    
-    with open(f1,"r") as file1, open(f2,"r") as file2:
+    #Creating the composite file
+    comf = open(cf,"w")
+    comf.close()
+    with open(f1,"r") as file1, open(f2,"r+") as file2,open(cf,"a") as cfile:
         for p1,p2 in zip(file1.readlines(),file2.readlines()):
-            print("-----first-------")
-            print(p1)
-            print("-----second------")
-            print(p2)
+            cfile.write(p1)
+            cfile.write(p2)
+        return cfile 
             
-printAlt("cricket.txt","pm.txt")
+printAlt("cricket.txt","pm.txt","composite.txt")
 
     
 
