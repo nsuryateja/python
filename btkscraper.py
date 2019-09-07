@@ -56,7 +56,7 @@ def printAlt(f1,f2,cf):
     #Creating the composite file
     comf = open(cf,"w")
     comf.close()
-    with open(f1,"r") as file1, open(f2,"r+") as file2,open(cf,"a") as cfile:
+    with open(f1,"r") as file1, open(f2,"r") as file2,open(cf,"a") as cfile:
         for p1,p2 in zip(file1.readlines(),file2.readlines()):
             cfile.write(p1)
             cfile.write(p2)
