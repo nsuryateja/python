@@ -1,0 +1,25 @@
+class Animal():
+  def __init__(self,breed):
+    self.breed = breed
+
+  def report(self):
+    print("Animal")
+
+  def eat(self):
+    print("Eating!")
+
+class Dog(Animal):
+  def __init__(self,breed):
+    Animal.__init__(self,breed)
+    print("Dog Created")
+  def report(self):
+    print("Dog")
+
+x = Animal("Lab")
+g = Dog("Huskie")
+x.report()
+x.eat()
+g.report()
+g.eat()
+print(x.breed)
+print(g.breed)
