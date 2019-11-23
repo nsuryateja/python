@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+
+ {%block content%}
+ <div class = "jumbotron">
+ 	<h1> Submit your details here</h1>
+ 	<h6>We don't save your data bro Believe us</h6>
+ 	<form action = "{{url_for('thank_you')}}">
+ 		<label>First:</label>
+ 		<input type="text" name="first" placeholder="firstname here">
+ 		<label>Last:</label>
+ 		<input type="text" name="last" placeholder="lastname here">
+        <input type = "submit" value = "Submit Form">
+    </form>
+ </div>
+ {%endblock content%}
