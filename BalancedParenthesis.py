@@ -1,3 +1,4 @@
+# Solution for LeetCode. Modify for other environments accordingly
 from collections import deque 
 stack = deque()
 brackets = {")": "(", "]": "[",  "}": "{"}
